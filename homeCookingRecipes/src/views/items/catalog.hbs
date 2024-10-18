@@ -1,0 +1,11 @@
+<h2>Recipe Catalog</h2>
+        <section class="recipes">
+
+        <article class="recipe">
+            {{#each items}}
+            {{> item }}
+            {{else}}
+            <p class="no-post">There are no recipes found yet!</p>
+            {{/each}}
+        </article>
+    </section>
