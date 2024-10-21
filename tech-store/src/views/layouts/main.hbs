@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>TechStore</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/items/catalog">Catalog</a></li>
+                    <li><a href="/about">About</a></li>
+                    {{#if isAuthenticated}}
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/items/create">Create Offer</a></li>
+                    <li><a href="auth/logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/auth/login">Login</a></li>
+                    <li><a href="/auth/register">Register</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{#if error}}
+        <div>
+            <div class="errorContainer">
+                <p>{{error}}</p>
+            </div>
+        </div>
+        {{/if}}
+        
+        {{{body}}}
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

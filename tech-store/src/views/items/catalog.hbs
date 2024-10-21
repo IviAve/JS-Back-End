@@ -1,0 +1,18 @@
+<section class="catalog-hero">
+        <div class="container">
+            <h2>Product Catalog</h2>
+            <p>Explore our extensive range of laptops, desktops, and accessories.</p>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="product-grid">
+            {{#each items}}
+            {{> item }}
+            {{else}}
+             <p class="no-post">There haven't been any devices posted yet.</p>
+            {{/each}}
+        </div>
+        </div>
+    </section>

@@ -1,0 +1,22 @@
+<section class="hero">
+        <div class="container">
+            <h2>Your One-Stop Shop for Laptops and Computers</h2>
+            <p>Find the best deals on the latest laptops, desktops, and accessories.</p>
+            <a href="/items/catalog" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            {{#each items}}
+                {{>item}}
+            {{else}}
+                <p class="no-post">There haven't been any devices posted yet.</p>
+            {{/each}}           
+        </div>
+    </div>
+
+
+</section>

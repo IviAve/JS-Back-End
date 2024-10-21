@@ -1,0 +1,32 @@
+<section class="profile-hero">
+    <div class="container">
+        <h2>User Profile</h2>
+        <p>Welcome back, <span id="username">{{userName}}</span> <strong id="email">( {{userEmail}} )</strong></p>
+    </div>
+</section>
+
+<section class="created-laptops">
+    <div class="container">
+        <h3>Created Laptops</h3>
+        <div class="laptop-list">
+            {{#each createdItems}}
+                {{>myItem}}
+            {{else}}
+                <p class="no-post">You haven't created a post yet</p>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<section class="preferred-laptops">
+    <div class="container">
+        <h3>Preferred Laptops</h3>
+        <div class="laptop-list">
+            {{#each preferedItems}}
+                {{>myItem}}
+            {{else}}
+                <p class="no-post">You haven't preferred any devices yet</p>
+            {{/each}}    
+        </div>
+    </div>
+</section>
