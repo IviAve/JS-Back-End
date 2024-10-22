@@ -1,0 +1,18 @@
+
+        <main class="dashboard">
+            <section id="dashboard">
+                <h2>Minerals and Gems</h2>
+                <ul class="card-wrapper">
+                    <!-- Display a li with information about every post (if any)-->
+                    
+                    {{#each items}}
+            {{> item }}
+            {{else}}
+
+                <!-- Display an h2 if there are no posts -->
+                 <div id="no-post">
+                    <h2>There are no gems and minerals! </h2>
+                </div> 
+                {{/each}}
+            </section>
+        </main>

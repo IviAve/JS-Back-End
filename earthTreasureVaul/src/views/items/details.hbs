@@ -1,0 +1,51 @@
+
+<main class="details">
+            <!-- Details page -->
+            <section id="details">
+                <div id="details-wrapper">
+                    <p id="details-title">Name: {{item.name}}</p>
+                    <div id="img-wrapper">
+                        <img src="{{item.imageUrl}}"  alt="{{item.name}}"/>
+                    </div>
+                    <div id="info-wrapper">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Category: <span id="details-category">{{item.category}}</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Color: <span id="details-color">{{item.color}}</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Location: <span id="details-location">{{item.location}}</span></p>
+                                </td>
+                                <td>
+                                    <p>Formula: <span id="details-formula">{{item.formula}}</span></p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Description: <span id="details-description">{{item.description}}</span></p>
+                    </div>
+
+                    <!--Edit and Delete are only for creator-->
+                    <div id="action-buttons">
+                        {{#if isAuthenticated}}
+                {{#if isOwner}}
+                        <a href="/items/{{item._id}}/edit" id="edit-btn">Edit</a>
+                        <a href="/items/{{item._id}}/delete" id="delete-btn">Delete</a>
+                        {{else}}
+                    {{#if isLiked}}
+                    <p id="already-liked">You already liked this stone!</p>
+                    {{else}}
+                        <a href="/items/{{item._id}}/like" id="like-btn">Like</a>
+                        {{/if}}
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                </div>
+            </section>
+        </main>
