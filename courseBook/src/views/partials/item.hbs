@@ -1,0 +1,21 @@
+  
+
+            <!--If there are course in the database, show each one-->
+            <article class="all-course-card">
+                <article class="all-course-card-image">
+                    <!-- Do not forget to change the path to the image -->
+                    <img src="{{imageUrl}}" alt="{{title}}">
+                </article>
+
+                <article class="all-course-card-content">
+                    <!--You must put the headline value in <h2>-->
+                    <h2>{{title}}</h2>
+                    <!--You must put the headline value in <h3>-->
+                    <h3>Type: {{type}}</h3>
+                    <h3>Price: {{price}}</h3>
+                </article>
+
+                <article class="all-course-card-buttons">
+                    <a href="/items/{{_id}}/details" class="btn-details">Details</a>
+                </article>
+            </article>

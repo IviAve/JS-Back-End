@@ -1,0 +1,40 @@
+
+       <!--  {{#if error}}
+        <div>
+            <div class="errorContainer">
+                <p>{{error}}</p>
+            </div>
+        </div>
+        {{/if}} -->
+
+        
+            <!-- Create Page (Only for logged-in users) -->
+
+
+        <section id="create-container">
+            <div class="create-container-info">
+                <h1>Create Course</h1>
+                <form method="POST">
+                    <label>Title:</label>
+                    <input name="title" type="text" id="title" value="{{item.title}}">
+
+                    <label>Type:</label>
+                    <input name="type" type="text" id="type" value="{{item.type}}">
+
+                    <label>Certificate:</label>
+                    <input name="certificate" type="text" id="certificate" value="{{item.certificate}}">
+
+                    <label>Image:</label>
+                    <input name="imageUrl" type="text" id="image" placeholder="http://..." value="{{item.imageUrl}}">
+
+                    <label>Description:</label>
+                    <textarea id="content" name="description">{{item.description}}</textarea>
+
+                    <label>Price:</label>
+                    <input name="price" type="number" id="price" value="{{item.price}}">
+
+                    <input type="submit" id="btn" value="Create">
+                </form>
+            </div>
+        </section>
+    

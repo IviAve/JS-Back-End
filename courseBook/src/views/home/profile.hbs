@@ -1,0 +1,63 @@
+{{!-- <section class="profile-hero">
+    <div class="container">
+        <h2>User Profile</h2>
+        <p>Welcome back, <span id="username">{{userName}}</span> <strong id="email">( {{userEmail}} )</strong></p>
+    </div>
+</section>
+
+<section class="created-laptops">
+    <div class="container">
+        <h3>Created Laptops</h3>
+        <div class="laptop-list">
+            {{#each createdItems}}
+                {{>myItem}}
+            {{else}}
+                <p class="no-post">You haven't created a post yet</p>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<section class="preferred-laptops">
+    <div class="container">
+        <h3>Preferred Laptops</h3>
+        <div class="laptop-list">
+            {{#each preferedItems}}
+                {{>myItem}}
+            {{else}}
+                <p class="no-post">You haven't preferred any devices yet</p>
+            {{/each}}    
+        </div>
+    </div>
+</section> --}}
+
+<section id="user">
+    <div class="user-info">
+        <div class="user-logo">
+            <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745">
+        </div>
+        <h1 class="user-email">{{user}}</h1>
+        <h2 class="created-course-count">Total Created Course: {{createdItems.length}}</h2>
+        <h2 class="sign-course-count">Total Sign up Course: {{likedItems.length}}</h2>
+    </div>
+</section>
+<section class="profile-course">
+    <div class="created-course">
+        <h2 class="section-title">Created Course</h2>
+        {{#each createdItems}}
+            {{>itemForCreate}}
+        {{else}}
+            <h2 class="no-course-in-profile">You haven't created a course yet...</h2>
+        {{/each}}      
+    </div>
+
+    <div class="sign-course">
+        <h2 class="section-title">Sign Up Course</h2>
+        {{#each likedItems}}
+            {{>likedItem}}
+        {{else}}
+            <h2 class="no-course-in-profile">You haven't signed up for any course yet...</h2>
+        {{/each}}       
+    </div>
+
+</section>

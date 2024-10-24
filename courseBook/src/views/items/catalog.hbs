@@ -1,0 +1,18 @@
+
+        <section id="all-course-page">
+            <article class="all-course-title">
+                <h1>All Courses</h1>
+            </article>
+                    <!-- Display a li with information about every post (if any)-->
+                    
+                    {{#each items}}
+            {{> itemForCatalog }}
+            {{else}}
+
+                <!-- Display an h2 if there are no posts -->
+                 <article class="not-available-courses">
+                <h1>No course created yet.</h1>
+                </article>
+                {{/each}}
+            </section>
+        

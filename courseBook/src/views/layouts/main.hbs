@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- In case of error, you should display div with class "errorContainer" -->
+    <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+    
+    <div class="navigation">
+        <nav>
+            <img src="/images/logo.png">
+            <ul>
+                <!-- Guest users and Logged users -->
+                <li><a href="/">Home</a></li>
+                <li><a href="/items/catalog">All Courses</a></li>
+                
+                {{#if isAuthenticated}}
+                <!--For loggin users-->
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/items/create">Create Course Offers</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                <!--For guest users-->
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+                {{/if}}
+            </ul>
+            {{#if userEmail}}<em>{{userEmail}}</em>{{/if}}
+        </nav>
+    </div>
+
+    <main>
+
+    
+        {{#if error}}
+        <div>
+            <div class="errorContainer">
+                <p>{{error}}</p>
+            </div>
+        </div>
+        {{/if}} 
+        
+        {{{body}}}
+    
+    </main>
+
+    <footer>Back-End 2023</footer>
+</body>
+
+</html>
