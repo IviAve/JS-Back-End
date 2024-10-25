@@ -1,0 +1,22 @@
+  <!--{{#if error}}
+        <div>
+            <div class="errorContainer">
+                <p>{{error}}</p>
+            </div>
+        </div>
+        {{/if}} -->
+
+
+            <!-- Login Page (Only for Guest users) -->
+            <section id="loginPage">
+            <form id='loginForm'  method="POST">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Email" value="{{email}}">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+
+                <input type="submit" class="register" value="Login">
+            </form>
+        </section>
+

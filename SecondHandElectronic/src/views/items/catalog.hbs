@@ -1,0 +1,17 @@
+
+         <section id="viewCatalog" class="background-img">
+            <!--If there are one or more electronics-->
+            <div class="added-electronics">
+                    <!-- Display a li with information about every post (if any)-->
+                    
+                    {{#each items}}
+            {{> item }}
+            {{else}}
+
+                <!-- Display an h2 if there are no posts -->
+                 <div class="guest">
+                There are no electronics found...
+            </div> 
+                {{/each}}
+            </section>
+        
